@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if data %}
+
+
+    <table border="2">
+        <tr>
+            <th>Username</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Update</th>
+            <th>delete</th>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.dob}}</td>
+            <td><a href="{% url 'calls:update' pk=i.id %}"><button>Update</button></a></td>
+            <td><a href="{% url 'calls:delete' pk=i.id %}"><button>delete</button></a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>data is not found</h1>
+    {% endif %}
+    <a href="{% url 'calls:register'%}"><button>Register</button></a>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1> hello</h1>
+    <h2>variable a: {{a}}</h2>
+    <h2>variable b: {{b}}</h2> -->
+    {% if 100 %} <h1>"hello"</h1>
+
+    {% endif %}
+
+    <!-- {{ 'helloworld123' | add:"haii" }} -->
+    <!-- {{10 | add:20}} -->
+    {{'hello world haii'| title }}<br>
+    {{'hello world haii'| upper }}<br>
+    {{'hello world haii'| lower }}<br>
+    {{'hello world haii'| wordcount }}<br>
+    {{'hello world haii'| length }}<br>
+    {{'hello \n world \n haii'| linenumbers }}<br>
+    {{'hello \n world \n haii'| slice:'::-1' }}<br>
+    {{'hello \n world \n haii'| first }}<br>
+    {{'hello \n world \n haii'| last }}<br>
+    {{'hello \n world \n haii'| join:"-" }}<br>
+    {{d|default:'100'}}<br>
+    {{'hello \n world \n haii'|cut:'10'}}<br>
+
+    {{'hello \n world \n haii'|truncatewords:1}}<br>
+    {{'hello \n world \n haii'|capfirst}}
+
+
+</body>
+
+</html>

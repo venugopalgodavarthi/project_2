@@ -16,13 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from whatsapp.views import upper_case, login
+from whatsapp.views import upper_case, login, about, base, sample
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calls/', include('calls.urls')),
     path(route='upper/<name>/', view=upper_case, name="upper"),
     path(route='login/', view=login, name="login"),
+    path(route='about/<x>/<y>/', view=about, name="about"),
+    path(route='base/<data>/', view=base, name="base"),
+    path(route='sample/', view=sample, name="sample"),
 
 
 

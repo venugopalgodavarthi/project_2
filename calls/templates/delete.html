@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+
+<body>
+    {% if id %}
+    <form action="" method="post">
+        {%csrf_token%}
+        <h1>Are you sure to delete id {{id.id}} data</h1>
+        <h2>Username: {{id.username}}</h2>
+        <input type="submit" value="Delete">
+    </form>
+    {% else %}
+    <h1>data is not found </h1>
+    {% endif %}
+
+</body>
+
+</html>
